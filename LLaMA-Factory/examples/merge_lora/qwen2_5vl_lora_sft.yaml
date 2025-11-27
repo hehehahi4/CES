@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /data3/home/dengzehao/data/model/Qwen2.5-VL-7B-Instruct
+adapter_name_or_path: /data3/home/dengzehao/data/LLaMA-Factory/saves/Qwen2.5-VL-7B-Instruct/lora/train_2025-10-25-08-09-43/checkpoint-700
+template: qwen2_vl
+trust_remote_code: true
+
+### export
+export_dir: /data3/home/dengzehao/data/model/my_output/sft/planner-vl
+export_size: 5
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false

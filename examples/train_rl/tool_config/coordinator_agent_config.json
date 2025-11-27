@@ -1,0 +1,7 @@
+{
+    "coordinator_agent_urls": [
+        "http://127.0.0.1:10032/v1",
+        "http://127.0.0.1:10033/v1"
+    ],
+    "coordinator_agent_path": "/data2/home/dengzehao/data/model/planner-vl2"
+}

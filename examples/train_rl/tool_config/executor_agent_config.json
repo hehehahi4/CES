@@ -1,0 +1,7 @@
+{
+    "executor_agent_urls": [
+        "http://127.0.0.1:10030/v1",
+        "http://127.0.0.1:10031/v1"
+    ],
+    "executor_agent_path": "/data2/home/dengzehao/data/model/GUI-R1/GUI-R1-7B"
+}
