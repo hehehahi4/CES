@@ -188,18 +188,15 @@ def evaluate_trajectory_multigpu(episodes_to_evaluate: list,
                 planner_prompt = PLANNER_PROMPT.format(high_level_instruction=high_level_instruction, current_state=memory_cache.get_stc_for_prompt())
                 planner_q_in.put((request_id + "_plan", planner_prompt, screenshot_path))
                 _, planner_output_raw = planner_q_out.get()
-                print(planner_output_raw)
                 lli = extract_from_tags(planner_output_raw, "answer")
 
                 action_prompt = ACTION_AGENT_PROMPT.format(instruction=lli)
                 action_q_in.put((request_id + "_act", action_prompt, screenshot_path))
                 _, action_output_raw = action_q_out.get()
 
-                print(memory_cache.get_stc_for_prompt())
                 stc_prompt = MEMORY_PROMPT_stc.format(high_level_instruction=high_level_instruction, current_state=memory_cache.get_stc_for_prompt(), current_action=action_output_raw)
                 memory_q_in.put((request_id + "_stc", stc_prompt))
                 _, memory_output_raw = memory_q_out.get()
-                print(memory_output_raw)
                 memory_cache.update_stc(memory_output_raw)
                 
                 parsed_prediction = parse_action_agent_output(action_output_raw)
@@ -208,8 +205,6 @@ def evaluate_trajectory_multigpu(episodes_to_evaluate: list,
                 
                 original_image = Image.open(screenshot_path).convert("RGB")
                 original_w, original_h = original_image.size
-                print("original_w, original_h:", original_w, original_h)
-                print(original_w==w, original_h==h)
 
                 gt_scale_w = original_w / 1000
                 gt_scale_h = original_h / 1000
@@ -218,8 +213,6 @@ def evaluate_trajectory_multigpu(episodes_to_evaluate: list,
                     pred_coord_raw[0] / gt_scale_w,
                     pred_coord_raw[1] / gt_scale_h
                 ]
-                print(parsed_prediction["pred_coord"])
-                print(pred_coord_scaled)
                 parsed_prediction["pred_coord"] = pred_coord_scaled
 
                 formatted_gt = format_ground_truth(step)
