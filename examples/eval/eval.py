@@ -202,7 +202,8 @@ def evaluate_trajectory_multigpu(episodes_to_evaluate: list,
                 parsed_prediction = parse_action_agent_output(action_output_raw)
 
                 pred_coord_raw = parsed_prediction["pred_coord"]
-                
+
+                # 
                 original_image = Image.open(screenshot_path).convert("RGB")
                 original_w, original_h = original_image.size
 
