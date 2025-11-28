@@ -95,5 +95,7 @@ python examples/eval/eval.py
 ```
 
 
-### 🙏 Acknowledgements
-We thank for the code repository: [verl](https://github.com/volcengine/verl), [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [vLLM](https://github.com/vllm-project/vllm), [SWIRL](https://github.com/Lqf-HFNJU/SWIRL).
+## 🙏 Acknowledgements
+We thank for the code repository: [verl](https://github.com/volcengine/verl), [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [vLLM](https://github.com/vllm-project/vllm), [SWIRL](https://github.com/Lqf-HFNJU/SWIRL), [GUI-R1-7B](https://github.com/ritzz-ai/GUI-R1).
+
+## 🙏 Cite
