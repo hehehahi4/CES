@@ -2,8 +2,8 @@
   
   <h1>Training High-Level Schedulers with Execution-Feedback Reinforcement Learning for Long-Horizon GUI Automation</h1>
   <p align="center">
-    🧻<a href="">Paper</a> |
-    🤗<a href="">Model</a> |
+    🧻<a href="https://arxiv.org/abs/2511.22235">Paper</a> |
+    🤗<a href="https://huggingface.co/hehehahi4/CES">Model</a> |
     🤗<a href="https://huggingface.co/datasets/hehehahi4/CES">Dataset</a>
   </p>
 
@@ -99,5 +99,13 @@ python examples/eval/eval.py
 We thank for the code repository: [verl](https://github.com/volcengine/verl), [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [vLLM](https://github.com/vllm-project/vllm), [SWIRL](https://github.com/Lqf-HFNJU/SWIRL), [GUI-R1](https://github.com/ritzz-ai/GUI-R1).
 
 ## 🙏 Citation
-If you think our work helpful, please cite our paper. Thanks!
+If you think our work helpful, please cite our paper. Thank you very much!
+```
+article{deng2025training,
+  title={Training High-Level Schedulers with Execution-Feedback Reinforcement Learning for Long-Horizon GUI Automation},
+  author={Deng, Zehao and Ju, Tianjie and Wu, Zheng and Zhang, Zhuosheng and Liu, Gongshen},
+  journal={arXiv preprint arXiv:2511.22235},
+  year={2025}
+}
+```
 
